@@ -41,7 +41,7 @@ export async function GET(request: Request) {
       isVerified: true,
     });
 
-    if (existingVerifiedUser) {
+    if (!existingVerifiedUser) {
       return Response.json(
         {
           success: true,
